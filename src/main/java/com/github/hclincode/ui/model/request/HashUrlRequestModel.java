@@ -1,8 +1,10 @@
 package com.github.hclincode.ui.model.request;
 
+import java.util.Optional;
+
 public class HashUrlRequestModel {
     private String url;
-    private String urlHash;
+    private Optional<String> urlHash = Optional.empty();
 
     public String getUrl() {
         return this.url;
@@ -13,10 +15,10 @@ public class HashUrlRequestModel {
     }
 
     public String getUrlHash() {
-        return this.urlHash;
+        return this.urlHash.isPresent() ? this.urlHash.get() : "";
     }
 
     public void setUrlHash(String urlHash) {
-        this.urlHash = urlHash;
+        this.urlHash = Optional.of(urlHash);
     }
 }
