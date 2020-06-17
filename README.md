@@ -92,3 +92,22 @@ status code : 400
     "path": "/api/v1/UrlHash/"
 }
 ```
+
+# Operate the web service
+## Environment requirements
+ - JAVA runtime with version 14
+ - gradle for build up and run
+ - Relational Database e.g. Mysql (script/buildMysql.sh offer docker solution)
+
+
+## Web service configuration
+file location: src/main/resources/application.properties   
+*** Please configure your own credential of mysql ***
+
+## RUN
+execute script/runWebService.sh   
+
+The web service run on port 8080
+
+# Trello 
+https://trello.com/b/UNLLLLwm/url-shorten
