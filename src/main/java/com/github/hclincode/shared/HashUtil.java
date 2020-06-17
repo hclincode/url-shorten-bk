@@ -11,6 +11,8 @@ public class HashUtil {
     private static final String RANDOM_HASH_CHARS = "23456789abcdefghijkmnopqrstuwxyzABCDEFGHIJKLMNPQRSTUVWXYZ-_";
     private static final String VALID_HASH_CHARS = "1234567890abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
     private static final Random RANDOM = new SecureRandom();
+    private static final int MIN_LENTH_OF_HASH = 4;
+    private static final int MAX_LENGH_OF_HASH = 16;
 
     public String generateUrlHash(int length) {
         return generateRandomString(length);
@@ -26,7 +28,10 @@ public class HashUtil {
         return new String(sb);
     }
 
-    public Boolean isValidUrlHash(String urlHash) {
-        return urlHash.chars().parallel().allMatch(i -> VALID_HASH_CHARS.indexOf(i) >= 0);
+    public Boolean isInValidUrlHash(String urlHash) {
+        if (urlHash.length() > MAX_LENGH_OF_HASH || urlHash.length() < MIN_LENTH_OF_HASH) {
+            return true;
+        }
+        return urlHash.chars().parallel().anyMatch(i -> VALID_HASH_CHARS.indexOf(i) < 0);
     }
 }

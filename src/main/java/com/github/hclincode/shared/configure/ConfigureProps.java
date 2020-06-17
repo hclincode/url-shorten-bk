@@ -10,6 +10,9 @@ public class ConfigureProps {
     @Value("${hashLiveSeconds}")
     private int hashLiveSeconds;
 
+    @Value("${hashLength}")
+    private int hashLength;
+
     public int getHashLiveSeconds() {
         return this.hashLiveSeconds;
     }
@@ -17,4 +20,13 @@ public class ConfigureProps {
     public void setHashLiveSeconds(int hashLiveSeconds) {
         this.hashLiveSeconds = hashLiveSeconds;
     }
+
+    public int getHashLength() {
+        return this.hashLength;
+    }
+
+    public void setHashLength(int hashLength) {
+        this.hashLength = hashLength;
+    }
+
 }

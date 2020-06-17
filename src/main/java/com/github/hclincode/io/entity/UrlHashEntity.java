@@ -30,8 +30,8 @@ public class UrlHashEntity implements Serializable {
     @Column(name = "hash", nullable = false, length = 16)
     private String urlHash;
 
-    @Column(name = "lastUpdateTime", nullable = false, insertable = false, updatable = false, columnDefinition = "TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP")
     @Temporal(TemporalType.TIMESTAMP)
+    @Column(name = "lastUpdateTime", nullable = false, insertable = false, updatable = false, columnDefinition = "TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP")
     private Date lastUpdateTime;
 
     public Long getId() {
