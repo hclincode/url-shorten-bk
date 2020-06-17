@@ -12,11 +12,11 @@ public class HashUrlResponse {
         this.url = url;
     }
 
-    public String getUrlhash() {
+    public String getUrlHash() {
         return this.urlHash;
     }
 
-    public void setUrlhash(String urlhash) {
-        this.urlHash = urlhash;
+    public void setUrlHash(String urlHash) {
+        this.urlHash = urlHash;
     }
 }
