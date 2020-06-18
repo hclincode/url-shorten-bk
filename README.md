@@ -2,7 +2,7 @@
 
 ## Requirements
  - query by hash string (shortened), then api return origin URL. 
- - query by URL, then api return hash string (shortened)
+ - query by URL, then api generate and return hash string (shortened)
  - query by URL with user defined shorten hash string
  - hash-url mapping have limited life time.
 
